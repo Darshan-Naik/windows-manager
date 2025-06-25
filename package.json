@@ -1,0 +1,28 @@
+{
+  "name": "windows-manager",
+  "version": "1.0.0",
+  "description": "A utility to manage and synchronize state across multiple browser windows/tabs.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "window",
+    "windows",
+    "tabs",
+    "browser",
+    "state",
+    "manager"
+  ],
+  "author": "Darshan Naik <darshu8314@gmail.com> (www.darshannaik.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

@@ -553,7 +553,11 @@ class WindowsManager<M = any> {
     this.removeThisWindow();
     this.stopMovePolling();
     this.setActiveWindow(null);
-    this.updateStorageData();
+    if (!this.windows?.length) {
+      localStorage.removeItem(this.key);
+    } else {
+      this.updateStorageData();
+    }
   };
 
   /**

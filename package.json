@@ -1,6 +1,6 @@
 {
   "name": "js-windows-manager",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A utility to manage and synchronize state across multiple browser windows/tabs.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

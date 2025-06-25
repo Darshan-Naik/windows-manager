@@ -2,7 +2,8 @@
 *
 
 # But not these files...
-!dist/
+!dist/index.js
+!dist/index.d.ts
 !package.json
 !README.md
 !LICENSE

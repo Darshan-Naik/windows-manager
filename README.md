@@ -228,3 +228,11 @@ This example demonstrates how to:
 ### `WindowsManager`
 
 - `
+
+## License
+
+MIT
+
+## GitHub
+
+[https://github.com/Darshan-Naik/windows-manager](https://github.com/Darshan-Naik/windows-manager)

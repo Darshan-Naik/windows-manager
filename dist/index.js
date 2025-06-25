@@ -115,7 +115,12 @@ class WindowsManager {
             this.removeThisWindow();
             this.stopMovePolling();
             this.setActiveWindow(null);
-            this.updateStorageData();
+            if (!this.windows?.length) {
+                localStorage.removeItem(this.key);
+            }
+            else {
+                this.updateStorageData();
+            }
         };
         /**
          * Handles window focus (sets this window as active).

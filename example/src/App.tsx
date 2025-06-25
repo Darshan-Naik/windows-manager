@@ -86,6 +86,9 @@ function App() {
 
   return (
     <div className="flex flex-col gap-3">
+      <p className="text-center p-2 italic">
+        Experience the Magic: Open in Multiple Windows and Drag Bubbles
+      </p>
       <div className=" h-full w-full flex gap-4 relative">
         {state.windows.map(({ id }) => (
           <div

@@ -1,17 +1,23 @@
-# windows-manager
+# js-windows-manager
 
 A utility to manage and synchronize state across multiple browser windows/tabs.
+
+## Demo
+
+👉 **[Live Demo](https://windows-manager-example.vercel.app/)**
+
+Try dragging the colored bubbles in multiple browser windows/tabs!
 
 ## Installation
 
 ```sh
-npm install windows-manager
+npm install js-windows-manager
 ```
 
 ## Usage
 
 ```ts
-import { WindowsManager } from "windows-manager";
+import WindowsManager from "js-windows-manager";
 
 const manager = new WindowsManager({
   onStateChange: (state) => {
@@ -24,7 +30,7 @@ const manager = new WindowsManager({
 });
 
 // Send a message to all windows
-tmanager.sendMessage({ hello: "world" });
+manager.sendMessage({ hello: "world" });
 
 // Update shared meta state
 manager.updateMeta({ shared: false });

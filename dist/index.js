@@ -146,8 +146,6 @@ class WindowsManager {
             }
         };
         this.thisWindow = this.initCurrentWindow();
-        // Expose for debugging
-        window.windowManager = this;
         this.channel = new BroadcastChannel(this.key);
         this.channel.onmessage = this.handleChannelMessage;
         this.meta = options.initialMeta;

@@ -227,8 +227,6 @@ This example demonstrates how to:
 
 ### `WindowsManager`
 
-- `
-
 ## License
 
 MIT

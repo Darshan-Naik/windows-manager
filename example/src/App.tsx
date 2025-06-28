@@ -89,6 +89,15 @@ function App() {
       <p className="text-center p-2 italic">
         Experience the Magic: Open in Multiple Windows and Drag Bubbles
       </p>
+      <div className="flex justify-center">
+        <a
+          href="#"
+          target="_blank"
+          className="text-blue-500 underline hover:text-blue-700 transition-colors"
+        >
+          Open another window
+        </a>
+      </div>
       <div className=" h-full w-full flex gap-4 relative">
         {state.windows.map(({ id }) => (
           <div

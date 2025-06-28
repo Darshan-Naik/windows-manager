@@ -30,6 +30,10 @@ export type WindowType = {
   scrollX: number;
   scrollY: number;
   screen: Screen;
+  innerWidth: number;
+  innerHeight: number;
+  outerWidth: number;
+  outerHeight: number;
 };
 
 /**
@@ -366,6 +370,10 @@ class WindowsManager<M = any> {
       scrollX,
       scrollY,
       screen,
+      innerWidth,
+      innerHeight,
+      outerWidth,
+      outerHeight,
     } = window;
     return {
       screenX,
@@ -375,6 +383,10 @@ class WindowsManager<M = any> {
       scrollX,
       scrollY,
       screen,
+      innerWidth,
+      innerHeight,
+      outerWidth,
+      outerHeight,
     };
   }
 
@@ -411,7 +423,11 @@ class WindowsManager<M = any> {
       rect.screenTop !== this.lastWindowRect.screenTop ||
       rect.screenLeft !== this.lastWindowRect.screenLeft ||
       rect.scrollX !== this.lastWindowRect.scrollX ||
-      rect.scrollY !== this.lastWindowRect.scrollY;
+      rect.scrollY !== this.lastWindowRect.scrollY ||
+      rect.innerWidth !== this.lastWindowRect.innerWidth ||
+      rect.innerHeight !== this.lastWindowRect.innerHeight ||
+      rect.outerWidth !== this.lastWindowRect.outerWidth ||
+      rect.outerHeight !== this.lastWindowRect.outerHeight;
     if (changed) {
       this.lastWindowRect = rect;
       this.thisWindow = { ...this.thisWindow, ...rect };

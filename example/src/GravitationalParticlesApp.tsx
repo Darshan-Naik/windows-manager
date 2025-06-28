@@ -1,6 +1,5 @@
 import { useEffect, useState, useRef, type JSX } from "react";
-import WindowsManager from "../../index";
-import type { WindowType } from "../../index";
+import WindowsManager from "js-windows-manager";
 
 const manager = new WindowsManager();
 
@@ -48,7 +47,7 @@ function GravitationalParticlesApp() {
   }, []);
 
   // Calculate line end point based on window position relative to current window
-  const calculateLineEndPoint = (otherWindow: WindowType) => {
+  const calculateLineEndPoint = (otherWindow) => {
     const currentWindow = state.thisWindow;
     const currentWindowWidth = currentWindow.innerWidth;
     const currentWindowHeight = currentWindow.innerHeight;

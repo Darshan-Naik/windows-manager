@@ -42,7 +42,11 @@ class WindowsManager {
                 rect.screenTop !== this.lastWindowRect.screenTop ||
                 rect.screenLeft !== this.lastWindowRect.screenLeft ||
                 rect.scrollX !== this.lastWindowRect.scrollX ||
-                rect.scrollY !== this.lastWindowRect.scrollY;
+                rect.scrollY !== this.lastWindowRect.scrollY ||
+                rect.innerWidth !== this.lastWindowRect.innerWidth ||
+                rect.innerHeight !== this.lastWindowRect.innerHeight ||
+                rect.outerWidth !== this.lastWindowRect.outerWidth ||
+                rect.outerHeight !== this.lastWindowRect.outerHeight;
             if (changed) {
                 this.lastWindowRect = rect;
                 this.thisWindow = { ...this.thisWindow, ...rect };
@@ -345,7 +349,7 @@ class WindowsManager {
      * @returns {Omit<WindowType, 'id'>} The window's rect and screen info.
      */
     getWindowRect() {
-        const { screenX, screenTop, screenLeft, screenY, scrollX, scrollY, screen, } = window;
+        const { screenX, screenTop, screenLeft, screenY, scrollX, scrollY, screen, innerWidth, innerHeight, outerWidth, outerHeight, } = window;
         return {
             screenX,
             screenTop,
@@ -354,6 +358,10 @@ class WindowsManager {
             scrollX,
             scrollY,
             screen,
+            innerWidth,
+            innerHeight,
+            outerWidth,
+            outerHeight,
         };
     }
     /**

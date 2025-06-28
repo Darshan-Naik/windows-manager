@@ -18,6 +18,10 @@ export type WindowType = {
     scrollX: number;
     scrollY: number;
     screen: Screen;
+    innerWidth: number;
+    innerHeight: number;
+    outerWidth: number;
+    outerHeight: number;
 };
 /**
  * The full state managed by WindowsManager, including meta state.
